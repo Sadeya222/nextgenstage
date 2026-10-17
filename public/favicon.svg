@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NexGen Portable Staging">
+  <rect width="64" height="64" rx="14" fill="#0A2A1A" />
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#A3E635" stroke-opacity="0.55" />
+  <rect x="14" y="14" width="16" height="16" rx="2.5" fill="#A3E635" />
+  <rect x="34" y="14" width="16" height="16" rx="2.5" fill="#A3E635" />
+  <rect x="14" y="34" width="16" height="16" rx="2.5" fill="#A3E635" />
+  <rect x="34" y="34" width="16" height="16" rx="2.5" fill="#A3E635" />
+</svg>

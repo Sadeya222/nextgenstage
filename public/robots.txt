@@ -1,0 +1,6 @@
+# NexGen Portable Staging - https://www.portablestage.co.uk/
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.portablestage.co.uk/sitemap.xml
