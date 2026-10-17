@@ -16,4 +16,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  server: {
+    // Allow the Arena preview host (and other *.e2b.app dev previews) through Vite's host check.
+    allowedHosts: [".e2b.app"],
+  },
 });

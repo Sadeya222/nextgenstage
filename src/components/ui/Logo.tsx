@@ -1,15 +1,17 @@
 import { cn } from "@/utils/cn";
 
-/** Four equal squares — Lucide-style “Squares” grid used as the NexGen mark. */
+/**
+ * NexGen mark — two concentric lime square rings on a dark teal tile.
+ * Bands are each 10% of the tile; the dark centre is 40% (matches the actual logo artwork).
+ */
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 40 40" className={cn("h-10 w-10 shrink-0", className)} aria-hidden="true" focusable="false">
-      <rect x="1" y="1" width="38" height="38" rx="8" fill="#0A2A1A" />
-      <rect x="1" y="1" width="38" height="38" rx="8" fill="none" stroke="#A3E635" strokeOpacity=".55" />
-      <rect x="8" y="8" width="10" height="10" rx="1.5" fill="#A3E635" />
-      <rect x="22" y="8" width="10" height="10" rx="1.5" fill="#A3E635" />
-      <rect x="8" y="22" width="10" height="10" rx="1.5" fill="#A3E635" />
-      <rect x="22" y="22" width="10" height="10" rx="1.5" fill="#A3E635" />
+      <rect x="0" y="0" width="40" height="40" fill="#335151" />
+      <rect x="0" y="0" width="40" height="40" fill="#DFF26D" />
+      <rect x="4" y="4" width="32" height="32" fill="#335151" />
+      <rect x="8" y="8" width="24" height="24" fill="#DFF26D" />
+      <rect x="12" y="12" width="16" height="16" fill="#335151" />
     </svg>
   );
 }
