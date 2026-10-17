@@ -2253,14 +2253,15 @@
     encodeURIComponent(
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">' +
         '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">' +
-        '<stop offset="0" stop-color="#0e3823"/><stop offset="0.55" stop-color="#0a2a1a"/><stop offset="1" stop-color="#06180f"/>' +
-        '</linearGradient><pattern id="p" width="28" height="28" patternUnits="userSpaceOnUse">' +
-        '<path d="M28 0H0v28" fill="none" stroke="#a3e635" stroke-opacity="0.13" stroke-width="1"/></pattern></defs>' +
+        '<stop offset="0" stop-color="#155433"/><stop offset="0.5" stop-color="#0a2a1a"/><stop offset="1" stop-color="#06180f"/>' +
+        '</linearGradient><pattern id="p" width="26" height="26" patternUnits="userSpaceOnUse">' +
+        '<path d="M26 0H0v26" fill="none" stroke="#a3e635" stroke-opacity="0.12" stroke-width="1"/></pattern></defs>' +
         '<rect width="400" height="300" fill="url(#g)"/><rect width="400" height="300" fill="url(#p)"/>' +
-        '<path d="M0 240 400 180v120H0z" fill="#a3e635" fill-opacity="0.14"/>' +
-        '<path d="M0 248 400 188" fill="none" stroke="#a3e635" stroke-opacity="0.55" stroke-width="3"/>' +
-        '<circle cx="200" cy="150" r="34" fill="none" stroke="#a3e635" stroke-opacity="0.5" stroke-width="2"/>' +
-        '<path d="M186 134v32l26-16z" fill="#a3e635" fill-opacity="0.85"/>' +
+        '<path d="M0 236 400 176v124H0z" fill="#0e3823"/>' +
+        '<path d="M0 244 400 184" fill="none" stroke="#a3e635" stroke-opacity="0.7" stroke-width="4"/>' +
+        '<path d="M0 254 400 194" fill="none" stroke="#84cc16" stroke-opacity="0.35" stroke-width="2"/>' +
+        '<rect x="150" y="118" width="100" height="7" rx="3.5" fill="#DFF26D" fill-opacity="0.9"/>' +
+        '<rect x="150" y="136" width="64" height="7" rx="3.5" fill="#DFF26D" fill-opacity="0.55"/>' +
       "</svg>"
     );
   document.addEventListener(
