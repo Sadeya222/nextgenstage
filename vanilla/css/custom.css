@@ -1,0 +1,143 @@
+/* ==========================================================================
+   NexGen Portable Staging — interaction & motion layer
+   Plain CSS only. The design/utility layer is in styles.css.
+   ========================================================================== */
+
+/* ---------- Scroll reveal (removed after it finishes so card hovers stay snappy) ---------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Hero entrance ---------- */
+[data-hero-in] {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: nx-hero-in 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+@keyframes nx-hero-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Hero: 60 second build bar (2.4s fill + 1.2s pause) ---------- */
+.nx-build-bar {
+  width: 0%;
+  animation: nx-build 3.6s ease-in-out infinite;
+}
+@keyframes nx-build {
+  0% {
+    width: 0%;
+  }
+  66.666%,
+  100% {
+    width: 100%;
+  }
+}
+
+/* ---------- Hero: crossfade text ---------- */
+#hero-slide-text {
+  transition: opacity 0.2s ease;
+}
+#hero-slide-text.is-fading {
+  opacity: 0;
+}
+
+/* ---------- Search combobox ---------- */
+.nx-search-shell.is-open {
+  border-color: #155433;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(163, 230, 53, 0.35);
+}
+
+/* ---------- Small pop-in used by menus / search results ---------- */
+.nx-pop {
+  animation: nx-pop 0.15s ease-out both;
+}
+@keyframes nx-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ---------- Overlay dialogs ---------- */
+.nx-overlay .nx-overlay-backdrop {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.nx-overlay.is-open .nx-overlay-backdrop {
+  opacity: 1;
+}
+
+.nx-dialog {
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease;
+}
+.nx-dialog-right {
+  transform: translateX(100%);
+}
+.nx-dialog-left {
+  transform: translateX(-100%);
+}
+.nx-dialog-center {
+  opacity: 0;
+  transform: translateY(16px) scale(0.97);
+}
+.nx-overlay.is-open .nx-dialog-right,
+.nx-overlay.is-open .nx-dialog-left {
+  transform: translateX(0);
+}
+.nx-overlay.is-open .nx-dialog-center {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ---------- Promo details / mobile accordions ---------- */
+.nx-collapse {
+  overflow: hidden;
+  transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+/* ---------- Back to top ---------- */
+#back-to-top.nx-visible {
+  animation: nx-pop-soft 0.28s ease-out both;
+}
+@keyframes nx-pop-soft {
+  from {
+    opacity: 0;
+    transform: scale(0.6) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ---------- Focus / motion preferences ---------- */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  [data-hero-in] {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .nx-build-bar {
+    width: 100% !important;
+    animation: none !important;
+  }
+}
